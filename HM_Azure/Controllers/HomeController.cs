@@ -44,7 +44,7 @@ namespace HM_Azure.Controllers
             try
             {
                 // Retrieve a secret by name
-                string secretName = "ConnectionStringDev"; // Replace with the name of your secret
+                string secretName = Environment.GetEnvironmentVariable("ConnectionString"); // Replace with the name of your secret
                 KeyVaultSecret secret = client.GetSecret(secretName);
 
                 // Output the secret value
