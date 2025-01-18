@@ -17,6 +17,7 @@ namespace HM_Azure.Controllers
 
         public IActionResult Index()
         {
+            GetSecrets();
             ViewBag.Message = TempData["Message"];
             return View();
         }
